@@ -8,6 +8,7 @@ const vendorRoute=require('./routes/vendorRoutes');
 const userRegister=require("./routes/userRegister");
 const userLogin=require("./routes/userLogin");
 const jwt=require("jsonwebtoken");
+const port=8080 || process.env.PORT
 
 conn();
 const app=express();
@@ -49,5 +50,5 @@ app.use('/',userLogin)
 app.use('/',vendorRoute)
 
 
-app.listen(8080, () => console.log('Server is running......'));
+app.listen(port, () => console.log(`server is running on the port ${port}`));
 
