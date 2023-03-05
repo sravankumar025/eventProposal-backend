@@ -8,7 +8,7 @@ const vendorRoute=require('./routes/vendorRoutes');
 const userRegister=require("./routes/userRegister");
 const userLogin=require("./routes/userLogin");
 const jwt=require("jsonwebtoken");
-const port=8080
+const port=8080 || process.env.PORT
 
 conn();
 const app=express();
